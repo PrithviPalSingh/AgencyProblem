@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCare</title>
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body style="background-color:whitesmoke">    
+    <div class="navbar">        
+        <div class="container" style="background-color:bisque">
+            <div style="padding-top:10px">@Html.Partial("_Banner")</div>
+            <div class="">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Products", "Products", "Products")</li>
+                    <li>@Html.ActionLink("Calculator", "Calculator", "Home")</li>
+                    <li>@Html.ActionLink("Miscelleneous", "Miscelleneous", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li style="background-color:gray;"><a href="https://agencyproblem20190411033125.azurewebsites.net/.auth/logout" style="color:white">Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="background-color:aliceblue">
+        @*<table>
+            <tr style="height:50px">@Html.Partial("_Banner")</tr>
+            <tr>
+                <td>
+                    @RenderBody()
+                </td>
+
+            </tr>
+        </table>*@
+        @RenderBody()
+        <hr />
+        <footer>
+            <div>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="~/Content/Images/Facebook.png" class="imgIcon" />
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="~/Content/Images/linkedin.png" class="imgIcon" />
+                </a>
+                <a href="https://twitter.com/?lang=en" target="_blank">
+                    <img src="~/Content/Images/twitter.png" class="imgIcon" />
+                </a>
+            </div>
+        </footer>
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

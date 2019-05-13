@@ -1,0 +1,46 @@
+﻿@model List<AgencyProblem.Models.BaseModel>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2><img src="~/Content/Images/Products.jpg" /></h2>
+<h3>@ViewBag.Message</h3>
+
+
+<table>
+    <thead>
+        <tr>
+            <th class="col-md-4">Insurance Code</th>
+            <th class="col-md-4">Insurance Description</th>
+            <th class="col-md-4">Insurance Name</th>
+            <th class="col-md-4">Insurance Price</th>
+            <th class="col-md-4">Insurance Type</th>
+            <th class="col-md-4">Insurance Duration</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td class="col-md-4">@Model[i].InsuranceCode</td>
+                <td class="col-md-4">@Model[i].InsuranceDescription</td>
+                <td class="col-md-4">@Model[i].InsuranceName</td>
+                <td class="col-md-4">@Model[i].InsurancePrice</td>
+                <td class="col-md-4">@Model[i].InsuranceType</td>
+                <td class="col-md-4">@Model[i].InsuranceDuration</td>
+                <td class="col-md-4">
+                    <a href="~/Payment/Payment">
+                        <img src="~/Content/Images/Buy.jpg" class="imgIcon" />
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+

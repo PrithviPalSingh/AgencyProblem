@@ -1,0 +1,9 @@
+﻿@{
+    var myChart = new Chart(width: 300, height: 200)
+        .AddTitle("MyInsurance")
+        .AddSeries(
+            name: "InsuranceDetails",
+            xValue: new[] { "1", "2", "3", "4", "5" },
+            yValues: new[] { "0", "5000", "10000", "20000", "25000" })
+        .Write();
+}

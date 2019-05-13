@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-6" style="background-color:aliceblue">
+            <table>
+                <tr><td><h2 style="font-family:'Edwardian Script ITC';font-weight:bold">My Dashboard</h2></td></tr>
+                <tr>
+                    <td>
+                        <img src="@Url.Action("ChartDashBoard", "Home")" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>My Plan: Medical Insurance - Standard Plan</label>
+                        <br /> <label>Amount Paid: 15,500</label>
+                        <br /><label>Amount Remaining: 9,500</label>
+                        <br /><label>Next Installment Date: @DateTime.Now.AddMonths(5).ToShortDateString()</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6" style="background-color:lightblue">
+            <table>
+                <tr><td><h2><img src="~/Content/Images/Products.jpg" /></h2></td></tr>                
+                <tr>
+                    <td>
+                        We care for you and our products take care of your family.
+                        <ul>
+                            For family
+                            <li>
+                                1. Medical Insurance
+                            </li>
+                            <li>
+                                2. Child Insurance
+                            </li>
+                            <li>
+                                3. Travel Insurance
+                            </li>
+                            <li>
+                                4. etc.
+                            </li>
+                        </ul>
+
+                        <ul>
+                            For Enteprise
+                            <li>
+                                1. Medical Insurance
+                            </li>
+                            <li>
+                                2. Child Insurance
+                            </li>
+                            <li>
+                                3. Travel Insurance
+                            </li>
+                            <li>
+                                4. etc.
+                            </li>
+                        </ul>
+
+                        @Html.ActionLink("Know More..", "Products", "Products")
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" style="background-color:lightblue;">
+            <h2><img src="~/Content/Images/Trend.jpg" />Most trending</h2>
+            You can calculate your yearly payment for a particular scheme using calculator.
+            <br />
+            Medical Insurance - Standard plan is famous among people from 25 to 35 years
+            <br />
+            @Html.ActionLink("Know More..", "Calculator", "Home")
+        </div>
+        <div class="col-md-4" style="background-color:powderblue">
+            <h2><img src="~/Content/Images/Refer.jpg" /> Refer and win </h2>
+            <p>Refer any friend for our packages and win exiting prizes</p>
+            @Html.ActionLink("Know More..", "Calculator", "Home")
+        </div>
+        <div class="col-md-4" >
+            <iframe src='https://webchat.botframework.com/embed/wecarechatbot-bot?s=9L3TDQrmhHQ.r1QTUKCvI3yU2c0p74lMq5S-d7K9UcL9x6SJll6-w_w' style="height:300px;"></iframe>
+        </div>
+    </div>
+</div>
